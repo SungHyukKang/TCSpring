@@ -15,12 +15,15 @@
   		controller.CreateGroupController,
   		controller.FreeWriteController,
   		controller.GroupMainController,
-  		controller.MyGroupController
+  		controller.MyGroupController,
+  		controller.NotificationController,
+  		controller.MemberFindController
   </param-value>
   </init-param>
   </servlet>
   <servlet-mapping>
   <servlet-name>DispatcherServlet</servlet-name>
   <url-pattern>*.do</url-pattern>
+  <url-pattern>info.search</url-pattern>
   </servlet-mapping>
 </web-app>

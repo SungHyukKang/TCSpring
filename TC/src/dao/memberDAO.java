@@ -41,17 +41,13 @@ public class memberDAO {
 	  
 	  public String id_search(String name , String email){
 		  String sql = "Select id from members where name=? and email=? ";
-		  
-		  
-		  
-			  try {				
+		    try {				
 					pstmt=conn.prepareStatement(sql);				
 					pstmt.setString(1,name);
 					pstmt.setString(2,email);
 					rs=pstmt.executeQuery();
 					while(rs.next()){
 						if(rs.getString(1)!=null){
-							
 								return rs.getString(1) ;
 							}else{
 								return null; //������ ��й�ȣ , ��й�ȣ Ȯ�� �ٸ� ��
@@ -64,9 +60,7 @@ public class memberDAO {
 					e.printStackTrace();
 				}
 			return null;
-				
 		  }
-	
 		public int modify(memberDTO dto , String modifyPw,String enteredPw){
 			String sql ="Select pw from members where id=?";
 			int X =0;
@@ -111,7 +105,6 @@ public class memberDAO {
 				pstmt.setString(4, dto.getEmail());
 				pstmt.setString(5, dto.getNickname());
 				X=pstmt.executeUpdate();
-				
 			}catch(SQLIntegrityConstraintViolationException e){
 				System.out.println("�����ϴ� ���̵�");
 				e.printStackTrace();
@@ -122,11 +115,9 @@ public class memberDAO {
     	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
     				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
     				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
-    	    	
 			}
 	 		return X;
 	 	}
-	 
         public int login(String id , String pw){
         	String SQL= "SELECT pw FROM members WHERE  id = ?";
     	    try {
