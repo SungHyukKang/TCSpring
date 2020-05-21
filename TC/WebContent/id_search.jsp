@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <form method="get" action="id_search.do">
+ <form method="get" action="find.do">
   이름:<input type="text" name="name"><br>
   이메일:<input type="text" name="email"> 
   <input type="submit" value="ok">

@@ -13,7 +13,6 @@ public class FreeWriteController implements Controller{
 		HttpSession session = request.getSession();
 		freeboardDAO dao = new freeboardDAO();
 		dao.write(Integer.parseInt(request.getParameter("gnum")), request.getParameter("ftitle"), request.getParameter("fcontent"), (String)session.getAttribute("id"));
-		
 		return "groupmain.do?gnum="+request.getParameter("gnum");
 	}
 

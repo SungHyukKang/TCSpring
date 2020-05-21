@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="get" action="find.do">
-  아이디:<input type="text" name="id"><br>
-  이메일:<input type="text" name="email"> 
-  <input type="submit" value="ok">
- </form>
+<c:out value="${findpw}"/><br>
+<button onclick="location='login.jsp'">로그인</button>
 </body>
 </html>

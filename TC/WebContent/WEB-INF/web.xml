@@ -24,6 +24,5 @@
   <servlet-mapping>
   <servlet-name>DispatcherServlet</servlet-name>
   <url-pattern>*.do</url-pattern>
-  <url-pattern>info.search</url-pattern>
   </servlet-mapping>
 </web-app>
