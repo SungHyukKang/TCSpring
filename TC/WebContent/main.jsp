@@ -1,10 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%String id = (String)session.getAttribute("id");%>
 <html lang="ko">
 <head>
-<meta charset="EUC-KR">
 <title>Insert title here</title>
 <style> 
   header{
@@ -138,7 +137,7 @@ input[type=checkbox]:checked ~ .content {
      <input id="toggle" type="checkbox"><label for="toggle">&equiv;</label>
       <div class="slide-menu">
          <nav id="category">
-         <h1><a href="logout.jsp">·Î±×¾Æ¿ô</a></h1>    
+         <h1><a href="logout.jsp">ë¡œê·¸ì•„ì›ƒ</a></h1>    
            </nav>
         </div> 
       </div>
@@ -146,7 +145,7 @@ input[type=checkbox]:checked ~ .content {
 
 <div>
 <form method="post" action="search.do">  
-<input type="text" placeholder="¹«¾ùÀ» Ã£À¸½Ã³ª¿ä?" name="search" style="font-size:34px; margin:370px auto auto 160px; width:600px; height:90px;">
+<input type="text" placeholder="ë¬´ì—‡ì„ ì°¾ìœ¼ì‹œë‚˜ìš”?" name="search" style="font-size:34px; margin:370px auto auto 160px; width:600px; height:90px;">
 <button style="position: relative; right:7px; top:30px;"><img src="pictures\searchpic.png" style="width:87px; height:87px;"></button>
 </form>
 </div>
@@ -156,10 +155,10 @@ input[type=checkbox]:checked ~ .content {
 <a href="free_write.jsp"><img src="pictures\penpic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a>
 <a href="#"><img src="pictures\bellpic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a>
 <a href="myPage.jsp"><img src="pictures\myPagepic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a><br>
-<span style="margin:25px auto auto 140px; font-size:25px;">È¨</span>
-<span style="margin:25px auto auto 150px; font-size:25px;">±Û¾²±â</span>
-<span style="margin:25px auto auto 160px; font-size:25px;">¾Ë¸²</span>
-<span style="margin:25px auto auto 125px; font-size:25px;">¸¶ÀÌÆäÀÌÁö</span>
+<span style="margin:25px auto auto 140px; font-size:25px;">í™ˆ</span>
+<span style="margin:25px auto auto 150px; font-size:25px;">ê¸€ì“°ê¸°</span>
+<span style="margin:25px auto auto 160px; font-size:25px;">ì•Œë¦¼</span>
+<span style="margin:25px auto auto 125px; font-size:25px;">ë§ˆì´í˜ì´ì§€</span>
 </footer>
 </body>
 </html>

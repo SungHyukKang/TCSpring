@@ -1,6 +1,6 @@
 <%@page import="com.mysql.cj.Session"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="dao.groupDAO" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.PrintWriter" %>
@@ -26,7 +26,7 @@
 	</tr>
 	</c:forEach>
 	</table>
-	<input type="submit" value="°¡ÀÔ">
+	<input type="submit" value="ê°€ìž…">
 </form>
 </body>
 </html>

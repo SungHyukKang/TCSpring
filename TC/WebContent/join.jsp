@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<html lang="ko">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"  %>
+<% request.setCharacterEncoding("UTF-8"); %>
 <head>
-<meta charset="UTF-8">
-<title>È¸¿ø°¡ÀÔ</title>
+<title>íšŒì›ê°€ì…</title>
 <style>
 body{background-color:rgb(224,224,224); }
 .font_size{font-size:90px;}
@@ -15,18 +14,18 @@ div{text-align:center;}
 </head>
 <body>
 <header>
-<p class="font_size font_center">È¸¿ø°¡ÀÔ</p>
+<p class="font_size font_center">íšŒì›ê°€ì…</p>
 <hr>
 </header>
 
-  <form method="post" action="join.do">
-  <input type="text" name="id" placeholder="&nbsp¾ÆÀÌµğ" style="font-size:34px; width:700px; height:80px; display:block; margin:250px auto 0px auto;"><br>
-<input type="password" name="pw" placeholder="&nbspºñ¹Ğ¹øÈ£" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
-<input type="password" name="pw_check" placeholder="&nbspºñ¹Ğ¹øÈ£ È®ÀÎ" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
-<input type="text" name="name" placeholder="&nbspÀÌ¸§" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
-<input type="text" name="nickname" placeholder="&nbsp´Ğ³×ÀÓ" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
-<input type="text" name="email" placeholder="&nbspÀÌ¸ŞÀÏ" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
-<input type="submit" value="È¸¿ø °¡ÀÔ"style="font-size:34px; text-align:center; background-color:rgb(44,62,80);
+  <form method="get" action="join.do">
+  <input type="text" name="id" placeholder="&nbspì•„ì´ë””" style="font-size:34px; width:700px; height:80px; display:block; margin:250px auto 0px auto;"><br>
+<input type="password" name="pw" placeholder="&nbspë¹„ë°€ë²ˆí˜¸" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
+<input type="password" name="pw_check" placeholder="&nbspë¹„ë°€ë²ˆí˜¸ í™•ì¸" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
+<input type="text" name="name" placeholder="&nbspì´ë¦„" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
+<input type="text" name="nickname" placeholder="&nbspë‹‰ë„¤ì„" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
+<input type="text" name="email" placeholder="&nbspì´ë©”ì¼" style="font-size:34px; width:700px; height:80px; display:block; margin:10px auto;"><br>
+<input type="submit" value="íšŒì› ê°€ì…"style="font-size:34px; text-align:center; background-color:rgb(44,62,80);
  font-size:34px; color:rgb(255,255,255); width:700px; height:80px; display:block; margin:20px auto 30px auto;">
   </form> 
 </body>

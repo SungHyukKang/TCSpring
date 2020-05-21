@@ -11,6 +11,7 @@ import servlet.RequestMapping;
 public class JoinController implements Controller{
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+		
 		System.out.println("JoinController");
 		memberDTO vo = new memberDTO();
 		System.out.println("JoinController : "+request.getParameter("id"));

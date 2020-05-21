@@ -39,9 +39,9 @@ public class groupDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
-    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
 			if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
 	}
 		return arr;
 	}
@@ -67,10 +67,10 @@ public class groupDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
-	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
-				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
-		}
+    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
+			if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+	}
 		return arr;
 	}
 	
@@ -108,10 +108,10 @@ public class groupDAO {
  		catch (SQLException e) {
  			e.printStackTrace();
 		}finally{
-	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
-				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
-		}
+    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
+			if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+	}
  		return X;
  	}
   	

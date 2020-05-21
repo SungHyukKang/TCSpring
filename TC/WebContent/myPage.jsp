@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="EUC-KR">
-<title>¸¶ÀÌÆäÀÌÁö</title>
+<title>ë§ˆì´íŽ˜ì´ì§€</title>
 	<style> 
 	  header{
 	  position: fixed;
@@ -39,37 +39,37 @@
 </head>
 <body>
 <header>
-<p style="font-size:60px; text-align:center;">¸¶ÀÌÆäÀÌÁö</p>
+<p style="font-size:60px; text-align:center;">ë§ˆì´íŽ˜ì´ì§€</p>
 </header>
 
 <div style="background-color:white; width:100%; height: 170px; display:inline-block; position:absolute; top:222px;">
 <img src="pictures\profilepic.png" style="margin:7px 85px auto 20px;width:150px; height:150px;">
-<span style="font-size:60px; position:relative; bottom:46px;">ÀÌ¹ÎÃ¶</span>
+<span style="font-size:60px; position:relative; bottom:46px;"><%out.print(session.getAttribute("username")); %></span>
 </div>
 
 <div style="background-color:white; width:100%; height: 230px; display:inline-block; position:absolute; top:395px;">
 <img src="pictures\noticepic.png" style="margin:30px auto auto 30px;width:150px; height:150px;">
-<a href="#" style="font-size:40px; position:relative; left:80px; bottom:60px;">°øÁö»çÇ× ÀÔ´Ï´Ù.</a>
+<a href="#" style="font-size:40px; position:relative; left:80px; bottom:60px;">ê³µì§€ì‚¬í•­ ìž…ë‹ˆë‹¤.</a>
 </div>
 
 <div style="background-color:white; width:100%; height: 170px; display:inline-block; position:absolute; top:629px;">
 <img src="pictures\profilepic_2.png" style="margin:20px auto auto 50px;width:110px; height:110px;">
-<a href="modify.jsp" style="font-size:40px; position:relative; left:100px; bottom:35px;">È¸¿øÁ¤º¸¼öÁ¤</a>
+<a href="modify.jsp" style="font-size:40px; position:relative; left:100px; bottom:35px;">íšŒì›ì •ë³´ìˆ˜ì •</a>
 </div>
 
 <div style="background-color:white; width:100%; height: 170px; display:inline-block; position:absolute; top:803px;">
 <img src="pictures\documentpic.png" style="margin:20px auto auto 50px;width:110px; height:110px;">
-<a href="#" style="font-size:40px; position:relative; left:100px; bottom:35px;">¹®Á¦°ü¸®</a>
+<a href="#" style="font-size:40px; position:relative; left:100px; bottom:35px;">ë¬¸ì œê´€ë¦¬</a>
 </div>
 
 <div style="background-color:white; width:100%; height: 170px; display:inline-block; position:absolute; top:977px;">
 <img src="pictures\grouppic.png" style="margin:20px auto auto 50px;width:110px; height:110px;">
-<a href="myGroup.do" style="font-size:40px; position:relative; left:100px; bottom:35px;">±×·ì</a>
+<a href="myGroup.do" style="font-size:40px; position:relative; left:100px; bottom:35px;">ê·¸ë£¹</a>
 </div>
 
 <div style="background-color:white; width:100%; height: 170px; display:inline-block; position:absolute; top:1150px;">
 <img src="pictures\friendpic.png" style="margin:20px auto auto 50px;width:110px; height:110px;">
-<a href="#" style="font-size:40px; position:relative; left:100px; bottom:35px;">Ä£±¸°ü¸®</a>
+<a href="#" style="font-size:40px; position:relative; left:100px; bottom:35px;">ì¹œêµ¬ê´€ë¦¬</a>
 </div>
 
 <footer>
@@ -77,10 +77,10 @@
 <a href="free_write.jsp"><img src="pictures\penpic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a>
 <a href="#"><img src="pictures\bellpic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a>
 <a href="#"><img src="pictures\myPagepic.png" style="margin:25px auto auto 100px;width:110px; height:110px;"></a><br>
-<span style="margin:25px auto auto 140px; font-size:25px;">È¨</span>
-<span style="margin:25px auto auto 150px; font-size:25px;">±Û¾²±â</span>
-<span style="margin:25px auto auto 160px; font-size:25px;">¾Ë¸²</span>
-<span style="margin:25px auto auto 125px; font-size:25px;">¸¶ÀÌÆäÀÌÁö</span>
+<span style="margin:25px auto auto 140px; font-size:25px;">í™ˆ</span>
+<span style="margin:25px auto auto 150px; font-size:25px;">ê¸€ì“°ê¸°</span>
+<span style="margin:25px auto auto 160px; font-size:25px;">ì•Œë¦¼</span>
+<span style="margin:25px auto auto 125px; font-size:25px;">ë§ˆì´íŽ˜ì´ì§€</span>
 </footer>
 </body>
 </html>

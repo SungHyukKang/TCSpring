@@ -28,6 +28,37 @@ public class freeboardDAO {
 		}
 		return "";//데이터베이스 오류
 	}
+	
+	public freeboardDTO listload(int gnum,int fnum) {
+		freeboardDTO dto = new freeboardDTO();
+		String sql = null;
+		ResultSet rs = null;
+		try {
+			sql="select * from freeboard where gnum=? and fnum=?";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, gnum);
+			pstmt.setInt(2, fnum);
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				dto.setFcontent(rs.getString("fcontent"));
+				dto.setFdate(rs.getString("fdate"));
+				dto.setFid(rs.getString("fid"));
+				dto.setFnum(fnum);
+				dto.setFtitle(rs.getString("ftitle"));
+				dto.setFview(rs.getInt("fview"));
+				dto.setGnum(gnum);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+	}
+		return dto;
+	}
+	
 	public ArrayList<freeboardDTO> contentlist(int gnum) {
 		String sql = "Select * from freeboard where gnum=?";
 		ArrayList<freeboardDTO> arr =new ArrayList<>();
@@ -41,9 +72,9 @@ public class freeboardDAO {
 				dto.setGnum(gnum);
 				dto.setFnum(rs.getInt("fnum"));
 				dto.setFtitle(rs.getString("ftitle"));
-				dto.setContent(rs.getString("fcontent"));
+				dto.setFcontent(rs.getString("fcontent"));
 				dto.setFid(rs.getString("fid"));
-				dto.setFadate(rs.getString("fdate"));
+				dto.setFdate(rs.getString("fdate"));
 				dto.setFview(rs.getInt("fview"));
 				arr.add(dto);
 			}

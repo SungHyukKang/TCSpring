@@ -9,6 +9,29 @@ public class memberDAO {
 	public memberDAO(){
 		 conn=Util.getConn();
 	 }
+	public String userName(String id) {
+		String sql ="select name from members where id=?";
+		String name=null;
+		try {
+			if(conn==null)
+				conn=Util.getConn();
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				name=rs.getString("name");
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
+			if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+			if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+	}
+		return name;
+	}
 	
 	public String pw_search(String id , String email){
 		  String sql = "Select pw from members where id=? and email=? ";
@@ -32,8 +55,9 @@ public class memberDAO {
 					e.printStackTrace();
 				}finally{
 		    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-					if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
-					if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+		    		if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+		    		if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+					
 			}
 			return null;
 				
@@ -58,7 +82,11 @@ public class memberDAO {
 				 catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				}finally{
+		    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
+					if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+					if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+			}
 			return null;
 		  }
 		public int modify(memberDTO dto , String modifyPw,String enteredPw){
@@ -88,9 +116,9 @@ public class memberDAO {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}finally{
-	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
 				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
 		}
 			return 0;
 		}
@@ -112,10 +140,10 @@ public class memberDAO {
 	 		catch (SQLException e) {
 	 			e.printStackTrace();
 			}finally{
-    	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-    				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
-    				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
-			}
+	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}				
+				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
+		}
 	 		return X;
 	 	}
         public int login(String id , String pw){
@@ -136,10 +164,6 @@ public class memberDAO {
     	    catch(Exception e){
     	    	 e.printStackTrace();
     	    	 return -2;	
-    	    }finally{
-    	    		if (rs != null) {try {rs.close();} catch (SQLException e) {e.printStackTrace();}}
-    				if (conn != null) {try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
-    				if (pstmt != null) {try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
     	    }
     	}
 }

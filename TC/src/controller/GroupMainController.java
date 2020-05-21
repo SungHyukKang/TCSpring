@@ -16,9 +16,6 @@ public class GroupMainController implements Controller{
 		freeboardDAO dao = new freeboardDAO();
 		ArrayList<freeboardDTO> arr =new ArrayList<>();
 		arr=dao.contentlist(Integer.parseInt(request.getParameter("gnum")));
-		for(freeboardDTO dto : arr) {
-			System.out.println(dto.getFtitle());
-		}
 		request.setAttribute("result",arr);
 		request.setAttribute("gnum",request.getParameter("gnum"));
 		return "groupmain.jsp";

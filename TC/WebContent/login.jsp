@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
-<title>·Î±×ÀÎ</title>
+<title>ë¡œê·¸ì¸</title>
 <style>
    div{ display: block; margin: 300px auto; text-align:center;  }
    body{background-color:rgb(224,224,224); }
@@ -19,12 +19,12 @@
 <form method="post" action="login.do"> 
 <input type="text" name="id" style="width:400px; height:60px; display:block; margin:0px auto;"><br>
 <input type="password" name="pw" style="width:400px; height:60px; display:block; margin:0px auto;"><br>
-<input type="submit" value="·Î±×ÀÎ" style="font-size:20px; width:300px; height:50px; display:block; margin:20px auto;">
+<input type="submit" value="ë¡œê·¸ì¸" style="font-size:20px; width:300px; height:50px; display:block; margin:20px auto;">
 </form>
 </section>
 <footer>
 <p style="text-align:center;">
-<a href="id_search.jsp">ID/PWÃ£±â</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="join.jsp">È¸¿ø°¡ÀÔ</a>
+<a href="id_search.jsp">ID/PWì°¾ê¸°</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="join.jsp">íšŒì›ê°€ì…</a>
 </p>
 </footer>
 </body></html>

@@ -17,7 +17,9 @@
   		controller.GroupMainController,
   		controller.MyGroupController,
   		controller.NotificationController,
-  		controller.MemberFindController
+  		controller.MemberFindController,
+  		controller.BoardListDetailController,
+  		controller.CommentController
   </param-value>
   </init-param>
   </servlet>
@@ -25,4 +27,5 @@
   <servlet-name>DispatcherServlet</servlet-name>
   <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-</web-app>
+  
+  </web-app>

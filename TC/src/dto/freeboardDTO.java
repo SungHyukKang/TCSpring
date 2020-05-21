@@ -4,8 +4,8 @@ public class freeboardDTO {
 	private int fnum ;
 	private int gnum;
 	private String ftitle;
-	private String content;
-	private String fadate;
+	private String fcontent;
+	private String fdate;
 	private String fid;
 	private int fview;
 	public int getFnum() {
@@ -26,17 +26,17 @@ public class freeboardDTO {
 	public void setFtitle(String ftitle) {
 		this.ftitle = ftitle;
 	}
-	public String getContent() {
-		return content;
+	public String getFcontent() {
+		return fcontent;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setFcontent(String content) {
+		this.fcontent = content;
 	}
-	public String getFadate() {
-		return fadate;
+	public String getFdate() {
+		return fdate;
 	}
-	public void setFadate(String fadate) {
-		this.fadate = fadate;
+	public void setFdate(String fadate) {
+		this.fdate = fadate;
 	}
 	public String getFid() {
 		return fid;

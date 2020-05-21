@@ -16,9 +16,11 @@ public class LoginController implements Controller{
 		vo.setPw(request.getParameter("pw"));
 		memberDAO dao = new memberDAO();
 		int X =dao.login(vo.getId(),vo.getPw());
+		String name = dao.userName(request.getParameter("id"));
 		HttpSession session = request.getSession();
 		if(X==1) {
 			session.setAttribute("id", request.getParameter("id"));
+			session.setAttribute("username", name);
 			return "main.jsp";
 		}else
 			return "redirect:/login.jsp";
